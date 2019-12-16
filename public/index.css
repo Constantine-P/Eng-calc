@@ -1,0 +1,30 @@
+nav {
+    background-color: darkcyan;
+}
+
+.nav-wrapper {
+    padding: 0 2rem;
+}
+
+h5, h6, .bold {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+
+.wrapper form {
+    min-width: 300px;
+}
+
+.wrapper #report-form {
+    margin-right: 30px;
+}
+
+.compare {
+    text-align: center;
+}

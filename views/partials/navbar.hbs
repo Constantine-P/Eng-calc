@@ -1,0 +1,19 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">EngCALC</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#if isHome }}
+                <li class="active"><a href="/">Главная</a></li>
+            {{else}}
+                <li><a href="/">Главная</a></li>
+            {{/if}}
+
+            {{#if isCalculations }}
+                <li class="active"><a href="/calculations">Расчеты</a></li>
+            {{else}}
+                <li><a href="/calculations">Расчеты</a></li>
+            {{/if}}
+
+        </ul>
+    </div>
+</nav>

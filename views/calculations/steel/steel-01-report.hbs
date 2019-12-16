@@ -1,0 +1,36 @@
+<h5 class="bold">Проверка стального центрально-сжатого элемента</h5>
+<h6>Допущения и предпосылки.</h6>
+<p>Методика расчета принята согласно СНиП II-23-81*. Расчет выполнен для случая сплошностенчатых элементов не
+    П-образного сечения при отсутствии планок. Предполагается, что R_u / γ_u > R_y</p>
+<h6>Условные обозначения.</h6>
+<p>{{legend}}</p>
+<h6>Исходные данные.</h6>
+<p>
+{{#each initialData}}
+    {{this}}
+{{/each}}
+</p>
+<h6>Расчет.</h6>
+<p>1. Проверка прочности по формуле (5):</p>
+<p class="compare">{{comparisons.formula_5.comparison}}</p>
+<p class="compare">{{comparisons.formula_5.substituteValuesWithUnits}}</p>
+<p class="compare">{{comparisons.formula_5.compare}}</p>
+{{#if comparisons.formula_5.isTrue}}
+    <p class="bold">Прочность обеспечена.</p>
+{{else}}
+    <p class="bold">Прочность НЕ обеспечена.</p>
+{{/if}}
+<p>2. Определение гибкости.</p>
+<p>{{cq.λ.formulaWithCalcSymbol}}</p>
+<p>{{calculatedQuantities.λ_.formulaWithCalcSymbol}}</p>
+<p>3. Поскольку 2.5 < λ¯ ≤ 4.5, то φ определяется по формуле (9)</p>
+<p>{{calculatedQuantities.φ.formulaWithCalcSymbol}}</p>
+<p>4. Проверка устойчивости по формуле (7)</p>
+<p class="compare">{{comparisons.formula_7.comparison}}</p>
+<p class="compare">{{comparisons.formula_7.substituteValuesWithUnits}}</p>
+<p class="compare">{{comparisons.formula_7.compare}}</p>
+{{#if comparisons.formula_7.isTrue}}
+    <p class="bold">Устойчивость обеспечена.</p>
+{{else}}
+    <p class="bold">Устойчивость НЕ обеспечена.</p>
+{{/if}}

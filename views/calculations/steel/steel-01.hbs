@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <form id="report-form" >
+        <h5>Исходные данные</h5>
+        {{#each inputQuantities}}
+            <div class="input-field">
+                <input name="{{this.symbol}}" id="{{this.symbol}}" value="{{this.value}}" type="number" step="any" >
+                <label for="title">{{this.name}}, {{this.type.unit.symbol}}</label>
+                <span class="helper-text" data-error="Введите название" data-success="right"></span>
+            </div>
+        {{/each}}
+
+        <button class="btn btn-primary">Рассчитать</button>
+        <button class="btn btn-primary" id="save">Сохранить в DocX</button>
+    </form>
+    <div class="report container"></div>
+</div>
