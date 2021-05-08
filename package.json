@@ -15,7 +15,7 @@
     "docx": "^5.0.0-rc7",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
-    "handlebars": "^4.5.3",
+    "handlebars": "^4.7.7",
     "himalaya": "^1.1.0",
     "html-docx-js": "^0.3.1",
     "html-to-json": "^0.6.0"
